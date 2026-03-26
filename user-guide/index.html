@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI大模型聚合平台 - 用户指南</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="AI大模型聚合平台用户指南 - 支持40+上游AI提供商，提供统一API接口、用户管理、计费功能">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css" media="(prefers-color-scheme: dark)">
+  <style>
+    :root {
+      --theme-color: #3eaf7c;
+      --sidebar-width: 280px;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .app-name-link img {
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    .sidebar {
+      background-color: #fafafa;
+    }
+    .dark .sidebar {
+      background-color: #2f2f2f;
+    }
+    .markdown-section {
+      max-width: 900px;
+    }
+    .markdown-section h1, .markdown-section h2, .markdown-section h3 {
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 0.3em;
+    }
+    .markdown-section h1 {
+      margin-top: 0;
+    }
+    .cover {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    .cover h1 {
+      color: white;
+      font-size: 2.8em;
+    }
+    .cover p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    window.$docsify = {
+      name: 'AI大模型聚合平台 用户指南',
+      nameLink: '/',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      search: {
+        placeholder: '搜索文档...',
+        noData: '未找到相关结果',
+        depth: 3
+      },
+      formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function(content) {
+            // 自动为图片添加相对路径前缀
+            return content.replace(/!\[(.*?)\]\((?!http)(.*?)\)/g, '![$1](./$2)');
+          });
+        }
+      ]
+    }
+  </script>
+
+  <!-- Docsify core -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+
+  <!-- 中文语言包 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/front-matter.js"></script>
+
+  <script>
+    // 初始化完成后的回调
+    window.onload = function() {
+      console.log('文档已加载');
+    }
+  </script>
+</body>
+</html>
